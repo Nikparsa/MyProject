@@ -1,0 +1,14 @@
+@startuml UserOrderDiagram
+class User {
+    +name: String
+    +email: String
+    +login(): void
+}
+
+class Order {
+    +orderId: int
+    +date: Date
+}
+
+User "1" -- "0..*" Order : places
+@enduml

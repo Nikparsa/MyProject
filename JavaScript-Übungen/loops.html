@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Schleifen</title>
+    </head>
+    <body>
+        <h1> Schlaeifen in Javascript</h1>
+        <script>
+            // Javascript code
+            for(let i = 0; i <5; i++){
+                console.log("For-Schlaeife, Durchlauf:" +i);
+            }
+            let fruits = ["Apfel", "Banane", "Kirsche"]
+            for (let i = 0; i < fruits-length; i++){
+                console.log("Frucht:"+fruits[i]);
+            }
+            let counter = 0;
+            while (counter < 5){
+                console.log("while schleife, counter:" + counter);
+                counter++;
+            }
+            let pwd;
+            let attempts = 0;
+            while (pwd !== "12345" && attempts < 3){
+                pwd = prompt("Bitte geben Sie das pwd ein:");
+                attempts++;
+            }
+            if (pwd === "12345") {
+               console.log("Zugang gewährt.");
+            } else {
+             console.log("Zu viele Fehlversuche.");
+            }
+            let value = 0;
+            do {
+               console.log("Do-While-Schleife, Wert: " + value);
+               value++;
+            } while (value < 5);
+            let input;
+            do {
+               input = prompt("Geben Sie eine Zahl größer als 10 ein:");
+            } while (input <= 10);
+
+            console.log("Eingegebene Zahl: " + input);
+            let array = [1, 2, 3, 4, 5];
+            for (const item of array) {
+                console.log("for of schleife, element:" + item);
+
+            }
+            let colors = ["Rot", "Grün", "Blau"];
+            for (const color of colors) {
+            console.log("Farbe: " + color);
+            }
+            let person = {name: "Max", alter: 30, beruf: "Entwickler"};
+            for (const key in person) {
+            console.log(key + ": " + person[key]);
+            }
+            let zahlen = [10, 20, 30, 40];
+            for (let zahl of zahlen) {
+            console.log("Zahl: " + zahl);
+           }
+
+
+
+
+
+        </script>
+    </body>
+</html>

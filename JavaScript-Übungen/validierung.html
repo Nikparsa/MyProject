@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularvalidierung</title>
+</head>
+<body>
+
+<form id="myForm">
+  <label for="username">Benutzername:</label>
+  <input type="text" id="username" name="username" required>
+  <span id="usernameError" style="color: red; display: none;">Bitte Benutzernamen eingeben.</span>
+  
+  <br><br>
+
+  <label for="password">Passwort:</label>
+  <input type="password" id="password" name="password" required>
+  <span id="passwordError" style="color: red; display: none;">Bitte Passwort eingeben.</span>
+
+  <br><br>
+
+  <button type="submit">Einreichen</button>
+</form>
+
+<script src="validation.js"></script>
+
+</body>
+</html>

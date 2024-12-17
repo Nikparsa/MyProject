@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variablen und Datentypen</title>
+</head>
+<body>
+    <h1>JavaScript Variablen und Datentypen</h1>
+    <script>
+        // JavaScript Code hier
+        let name = "John";
+        console.log(name);  // Ausgabe: John
+        let age = 25;              // Number
+        let isStudent = true;      // Boolean
+        let courses = ["Math", "Science"];  // Array
+        let person = {firstName: "John", lastName: "Doe"};  // Object
+        console.log(age, typeof age);  // Ausgabe: 25 'number'
+        console.log(isStudent, typeof isStudent);  // Ausgabe: true 'boolean'
+        console.log(courses, typeof courses);  // Ausgabe: ["Math", "Science"] 'object'
+        console.log(person, typeof person);  // Ausgabe: {firstName: "John", lastName: "Doe"} 'object'
+        name = "Doe";
+        console.log(name);  // Ausgabe: Doe
+        const pi = 3.14159;
+        console.log(pi);  // Ausgabe: 3.14159
+        pi= 2; // nicht möglich, weil es ein constante variable ist.
+        console.log(pi); 
+
+
+    </script>
+</body>
+</html>

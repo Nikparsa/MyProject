@@ -1,0 +1,53 @@
+/* CSS-Variable für einfache Änderungen */
+:root {
+  --main-color: #77B925;
+}
+
+/* Allgemeines Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+nav a:hover {
+  background-color: var(--main-color);
+}
+
+/* Hauptinhalt und Artikel */
+main {
+  padding: 1rem;
+}
+
+article {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Query für Responsivität */
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}

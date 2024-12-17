@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bubbling und Capturing</title>
+  <style>
+    #grandparent, #parent, #child {
+      padding: 20px;
+      margin: 10px;
+    }
+    #grandparent {
+      background-color: lightblue;
+    }
+    #parent {
+      background-color: lightcoral;
+    }
+    #child {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+
+<div id="grandparent">
+  Grandparent
+  <div id="parent">
+    Parent
+    <div id="child">
+      Child
+    </div>
+  </div>
+</div>
+
+<script>
+  // Event Listener für die Capturing-Phase
+  document.getElementById('grandparent').addEventListener('click', function(event) {
+    console.log('Capturing: Grandparent');
+  }, true);
+
+  document.getElementById('parent').addEventListener('click', function(event) {
+    console.log('Capturing: Parent');
+  }, true);
+
+  document.getElementById('child').addEventListener('click', function(event) {
+    console.log('Capturing: Child');
+  }, true);
+
+  // Event Listener für die Bubbling-Phase
+  document.getElementById('grandparent').addEventListener('click', function(event) {
+    console.log('Bubbling: Grandparent');
+  }, false);
+
+  document.getElementById('parent').addEventListener('click', function(event) {
+    console.log('Bubbling: Parent');
+  }, false);
+
+  document.getElementById('child').addEventListener('click', function(event) {
+    console.log('Bubbling: Child');
+  }, false);
+
+  // Event Delegation auf das "grandparent" Element
+  document.getElementById('grandparent').addEventListener('click', function(event) {
+    console.log('Event Delegation: Clicked on ' + event.target.id);
+  });
+</script>
+
+</body>
+</html>

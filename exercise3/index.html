@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beispiel HTML Struktur</title>
+</head>
+<body>
+<h1 id="test">Willkommen auf meiner Webseite</h1>
+<p>Dies ist ein Absatz mit etwas Text.
+    <a href="https://www.fh-joanneum.at/msd">Besuchen Sie diese Beispiel-Website</a>
+</p>
+<form >
+    <select name="colorselect" id="colorselect">
+        <option value="red">Rot</option>
+        <option value="blue">Blau</option>
+        <option value="green">Grün</option>
+    </select>
+</form>
+
+
+
+
+
+
+
+
+<script>
+    const colorselect = document.getElementById("colorselect");
+    colorselect.addEventListener("change", e => {
+        //select the element
+        const text = document.getElementById("test");
+
+        //add the attribute style with color of input
+        document.getElementById("test").setAttribute("style", "color:" + myColor + ";");
+    })
+
+</script>
+</body>
+</html>
